@@ -1,4 +1,58 @@
+@import "header.scss";
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url(../font/Roboto/Roboto-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: inria-serif;
+  src: url(../font/Inria_Serif/InriaSerif-Regular.ttf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  font-family: "roboto";
+  font-size: 18px;
+  color: #3b3029;
+  padding: 0 50px;
+  @media (max-width: 768px) {
+    padding: 0 16px;
+  }
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  font-family: "inria-serif";
+  font-weight: bold;
+}
+
+h1 {
+  color: #f5f0e8;
+  font-size: 64px;
+  @media (max-width: 768px) {
+    font-size: 48px;
+  }
+}
+
+h2 {
+  font-size: 48px;
+}
+h3 {
+  font-size: 36px;
+}
+
+h4 {
+  font-family: "roboto";
+  font-size: 24px;
 }
