@@ -1,3 +1,5 @@
+/* Navbar */
+
 .navbar {
   background-color: #2a2d34;
   padding: 20px 40px;
@@ -37,6 +39,8 @@
     }
   }
 
+  /* Burger menu */
+
   &__links {
     display: flex;
     align-items: center;
@@ -50,6 +54,9 @@
       font-family: "roboto";
       text-transform: uppercase;
       transition: color 0.2s;
+      @media (max-with: 768px) {
+        font-size: 16px;
+      }
 
       &:hover {
         color: #d4a843;

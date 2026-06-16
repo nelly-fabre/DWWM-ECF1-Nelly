@@ -1,0 +1,46 @@
+.footer {
+  background-color: #2a2d34;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+
+  &__logo {
+    width: 50px;
+    flex-shrink: 0;
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+  }
+
+  &__brand {
+    text-decoration: none;
+  }
+
+  &__title {
+    font-family: "inria-serif";
+    text-transform: uppercase;
+
+    &--logo {
+      font-size: 24px;
+      color: #f5f0e8;
+    }
+
+    &--name {
+      font-size: 16px;
+      color: #f5f0e8;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer {
+      flex-wrap: wrap;
+      padding: 16px;
+    }
+  }
+}
