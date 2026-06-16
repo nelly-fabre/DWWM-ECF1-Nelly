@@ -1,0 +1,94 @@
+h2 {
+  margin-top: 30px;
+  color: #6b1d3a;
+}
+
+.program {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 60px;
+  margin-top: 40px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 40px 0;
+    padding-bottom: 80px;
+  }
+
+  &__card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__picture {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-top: 14px;
+  }
+
+  &__type {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #d4a843;
+    margin: 0;
+  }
+
+  &__title {
+    font-family: "inria-serif";
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #2a2d34;
+    text-decoration: none;
+    margin: 0;
+
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 6px;
+    }
+  }
+
+  &__date {
+    font-size: 14px;
+    color: #2a2d34;
+    margin: 0;
+  }
+}
+
+.picture-hover {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+
+  &.active,
+  .program__picture:hover & {
+    opacity: 1;
+  }
+
+  .more-icon {
+    width: 50px;
+    height: 50px;
+  }
+}

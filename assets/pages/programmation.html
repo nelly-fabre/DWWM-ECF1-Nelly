@@ -3,22 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Le Phosphore | Salle de Spectacle</title>
-    <link rel="stylesheet" href="/assets/css/style.min.css" />
+    <title>Programmation | Le Phosphore</title>
+    <link rel="stylesheet" href="../css/style.min.css" />
     <link
       rel="icon"
       href="/assets/img/favicon_io/favicon-32x32.png"
       type="image/png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <script
       src="https://code.jquery.com/jquery-4.0.0.min.js"
       integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
       crossorigin="anonymous"
     ></script>
-
     <script>
       $(document).ready(function () {
-        $("#header-content").load("assets/pages/header.html", function () {
+        $("#header-content").load("header.html", function () {
           const currentPage = window.location.pathname.split("/").pop();
 
           document.querySelectorAll(".nav-link").forEach((link) => {
@@ -31,15 +34,27 @@
           });
         });
 
-        $("#footer-content").load("assets/pages/footer.html", function () {});
+        $("#footer-content").load("footer.html", function () {});
       });
     </script>
+    <meta
+      name="description"
+      content="Retrouvez toute la programmation de la salle de spectacle"
+    />
   </head>
   <body>
-    <header>
-      <div id="header-content"></div>
-    </header>
-    <main>Page Index</main>
-    <footer><div id="footer-content"></div></footer>
+    <div id="header-content"></div>
+    <main>
+      <h2>La Programmation</h2>
+      <div class="program">
+        <!--------------------------->
+        <!-- PROGRAMMATION JS -->
+        <!--------------------------->
+      </div>
+    </main>
+    <div id="footer-content"></div>
+
+    <script src="/assets/js/programmation.js"></script>
+    <script src="/assets/js/main.js"></script>
   </body>
 </html>
