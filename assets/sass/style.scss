@@ -48,12 +48,18 @@ h1 {
 
 h2 {
   font-size: 48px;
+  @media (max-width: 768px) {
+    font-size: 36px;
+  }
 }
 h3 {
   font-size: 36px;
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
 }
 
 h4 {
   font-family: "roboto";
-  font-size: 24px;
+  font-size: 18px;
 }

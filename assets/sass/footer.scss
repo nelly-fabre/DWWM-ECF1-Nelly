@@ -1,6 +1,9 @@
 .footer {
   background-color: #2a2d34;
-  padding: 20px 40px;
+  font-family: "roboto";
+  font-size: 18px;
+  color: #f5f0e8;
+  padding: 0px 40px;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -41,6 +44,88 @@
     .footer {
       flex-wrap: wrap;
       padding: 16px;
+    }
+  }
+}
+
+.footerbody {
+  display: flex;
+  justify-content: space-between;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 30vh;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+
+    & h4 {
+      font-size: 20px;
+    }
+
+    & a {
+      color: #f5f0e8;
+      text-decoration: none;
+    }
+    & button {
+      background-color: #2e2820;
+
+      border-radius: 4px;
+      padding: 6px 12px;
+    }
+    &--open {
+      display: flex;
+      justify-content: space-between;
+    }
+    &--email {
+      display: flex;
+      flex-direction: row;
+      & input {
+        padding: 5px 10px;
+        border-radius: 4px 0 0 4px;
+      }
+      & button {
+        background-color: #997a33;
+        padding: 5px 20px;
+        border-radius: 4px;
+        color: #2a2d34;
+        font-weight: bold;
+      }
+    }
+  }
+}
+.footerbot {
+  background-color: #2a2d34;
+  color: #f5f0e8;
+  border-top: #d4a843 solid 2px;
+  display: flex;
+  flex-direction: column;
+
+  &__mention {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    &--left {
+      display: flex;
+    }
+    &--right {
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+      & a {
+        text-decoration: none;
+        color: #f5f0e8;
+      }
+    }
+  }
+  &__payment {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    & p {
+      background-color: #2e2820;
+      padding: 4px 10px;
     }
   }
 }
