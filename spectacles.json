@@ -97,7 +97,7 @@
         "places_total": 120,
         "places_vendues": 78,
         "artiste": "Nora Music",
-        "image": ""
+        "image": "/assets/img/nora.webp"
       },
       {
         "id": 8,
@@ -111,7 +111,7 @@
         "places_total": 120,
         "places_vendues": 98,
         "artiste": "Jamel Comedy Club",
-        "image": ""
+        "image": "/assets/img/jamel.webp"
       }
     ]
   }
