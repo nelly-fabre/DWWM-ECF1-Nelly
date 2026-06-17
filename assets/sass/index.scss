@@ -1,22 +1,45 @@
 .index-hero {
-  background-image: url(/assets/img/scene\ principale.webp);
   height: 100vh;
+  background-image: url(/assets/img/scene\ principale.webp);
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
 }
 
-.hero-content h3,
+.hero-block {
+  display: flex;
+  flex-direction: column;
+  padding: 0 100px;
+  gap: 20px;
+  &__logo {
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  @media (max-width: 768px) {
+    padding: 0;
+    margin: auto;
+  }
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+}
+
+.hero-text h3,
 h1 {
   color: #f5f0e8;
   font-weight: 300;
 }
 
-.hero-content {
-  & img {
-    max-width: 150px;
-    width: 100%;
-    height: auto;
-  }
-}
-.hero-content button {
+.hero-text button {
   font-size: 20px;
   font-family: "inria-serif";
   text-transform: uppercase;
@@ -33,8 +56,12 @@ h1 {
     color 0.2s;
 
   &:hover {
-    background: #2a2d34;
+    background: #6b1d3a;
     color: #d4a843;
     font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
   }
 }

@@ -33,25 +33,31 @@
 
         $("#footer-content").load("assets/pages/footer.html", function () {});
       });
+
+      $("#carousel").load("assets/pages/carousel.html", function () {});
     </script>
   </head>
   <body>
-    <header>
-      <div id="header-content"></div>
-    </header>
     <main>
+      <div id="header-content"></div>
       <section class="index-hero">
-        <div class="hero-content">
+        <div class="hero-block">
           <img
-            class="hero-content__logo"
+            class="hero-block__logo"
             src="/assets/img/picto-detour.png"
             alt="logo-phosphore"
           />
-          <h1>Le Phosphore</h1>
-          <h3>Salle de Spectacle</h3>
-          <button class="btn-reserve">Découvrir la programmation</button>
+
+          <div class="hero-text">
+            <div class="hero-text__title">
+              <h1>Le Phosphore</h1>
+              <h3>Salle de Spectacle</h3>
+            </div>
+            <button class="btn-reserve">Découvrir la programmation</button>
+          </div>
         </div>
       </section>
+      <section id="carousel"></section>
     </main>
     <footer><div id="footer-content"></div></footer>
   </body>
