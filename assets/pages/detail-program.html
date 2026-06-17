@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fiche Projet | atelier oda - olivier duffé</title>
+
+    <link rel="stylesheet" href="../css/style.min.css" />
+    <link rel="icon" href="../img/ODA_FAVICON.png" type="image/png" />
+    <script type="module" src="/assets/js/detail-program.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-4.0.0.min.js"
+      integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        // header
+        $("#header-content").load("header.html", function () {
+          const currentPage = window.location.pathname.split("/").pop();
+          document.querySelectorAll(".nav-link").forEach((link) => {
+            const linkPage = link.getAttribute("href").split("/").pop();
+            link.classList.toggle("active", linkPage === currentPage);
+          });
+        });
+
+        // footer
+        $("#footer-content").load("footer.html");
+
+        // poids — setTimeout pour laisser les ressources se déclarer
+        setTimeout(function () {
+          const resources = performance.getEntriesByType("resource");
+          const totalBytes = resources.reduce(
+            (acc, r) => acc + (r.transferSize || 0),
+            0,
+          );
+          const poids =
+            totalBytes < 1024 * 1024
+              ? (totalBytes / 1024).toFixed(1) + " Ko"
+              : (totalBytes / 1024 / 1024).toFixed(2) + " Mo";
+
+          $("#page-weight").text(poids);
+        }, 1000);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="header-content"></div>
+    <section class="fiche"></section>
+    <div class="space"></div>
+    <a class="backlink-to-full-page" href="/assets/pages/programmation.html"
+      >Revenir à l'ensemble des spectacles</a
+    >
+
+    <div id="footer-content"></div>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
