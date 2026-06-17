@@ -11,6 +11,17 @@ fetch("/spectacles.json")
       const card = document.createElement("div");
       card.classList.add("program__card");
 
+      const programBadge = document.createElement("span");
+      programBadge.classList.add("badge");
+
+      if (program.places_vendues >= program.places_total) {
+        programBadge.textContent = "Complet";
+        programBadge.classList.add("badge__full");
+      } else {
+        programBadge.textContent = `${program.places_total - program.places_vendues} places restantes`;
+        programBadge.classList.add("badge__available");
+      }
+
       const programPictureWrapper = document.createElement("div");
       programPictureWrapper.classList.add("program__picture");
 
@@ -27,7 +38,7 @@ fetch("/spectacles.json")
       programImageHoverIcon.src = "/assets/img/hover-more-icon.png";
 
       const programImageHoverLink = document.createElement("a");
-      programImageHoverLink.href = `/assets/pages/fiche-program.html?id=${program.id}`;
+      programImageHoverLink.href = `/assets/pages/detail-program.html?id=${program.id}`;
 
       const programType = document.createElement("p");
       programType.classList.add("program__type");
@@ -36,7 +47,7 @@ fetch("/spectacles.json")
       const programTitle = document.createElement("a");
       programTitle.classList.add("program__title");
       programTitle.textContent = program.titre;
-      programTitle.href = `/assets/pages/fiche-program.html?id=${program.id}`;
+      programTitle.href = `/assets/pages/detail-program.html?id=${program.id}`;
 
       const programDate = document.createElement("p");
       programDate.classList.add("program__date");
@@ -60,6 +71,7 @@ fetch("/spectacles.json")
       programPictureWrapper.appendChild(programImageHoverLink);
       card.appendChild(programPictureWrapper);
       card.appendChild(programInfo);
+      card.appendChild(programBadge);
 
       cardsContainer.appendChild(card);
     });
