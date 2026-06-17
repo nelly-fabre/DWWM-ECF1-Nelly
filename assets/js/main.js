@@ -60,36 +60,6 @@ function setActiveCard(activeIndex) {
   });
 }
 
-arrowScrollToRight.addEventListener("click", function () {
-  if (activeIndex < 2) {
-    activeIndex++;
-    setActiveCard(activeIndex);
-    updateArrows(activeIndex);
-  }
-});
-arrowScrollToLeft.addEventListener("click", function () {
-  if (activeIndex > 0) {
-    activeIndex--;
-    setActiveCard(activeIndex);
-    updateArrows(activeIndex);
-  }
-});
-
-// Update arrows color
-function updateArrows(activeIndex) {
-  if (activeIndex === 0) {
-    arrowScrollToLeft.classList.add("is-disabled");
-    arrowScrollToRight.classList.remove("is-disabled");
-  } else if (activeIndex === 1) {
-    arrowScrollToRight.classList.remove("is-disabled");
-    arrowScrollToLeft.classList.remove("is-disabled");
-  } else {
-    arrowScrollToRight.classList.add("is-disabled");
-  }
-}
-
-updateArrows(activeIndex);
-
 cards.forEach((card, index) => {
   card.addEventListener("click", function () {
     activeIndex = index;

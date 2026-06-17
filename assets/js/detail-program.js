@@ -113,9 +113,58 @@ if (!program) {
   const detailRight = document.createElement("div");
   detailRight.classList.add("detail-infos__right");
 
+  // Calcul du taux de remplissage
   const placesRestantes = program.places_total - program.places_vendues;
+  const pct = Math.round((program.places_vendues / program.places_total) * 100);
+  const tier = pct >= 90 ? "scarce" : pct >= 70 ? "limited" : "available";
   const dispoText =
-    placesRestantes <= 0 ? "Complet" : `${placesRestantes} places disponibles`;
+    placesRestantes <= 0 ? "Complet" : `${placesRestantes} places restantes`;
+
+  // Conteneur disponibilité
+  const capacityContainer = document.createElement("div");
+  capacityContainer.classList.add(
+    "detail_container",
+    "detail_container--capacity",
+  );
+
+  const capacityTitle = document.createElement("div");
+  capacityTitle.classList.add("detail_title");
+  capacityTitle.textContent = "Disponibilité";
+
+  // Label + compte
+  const capacityLabel = document.createElement("div");
+  capacityLabel.classList.add("detail__capacity-label");
+
+  const capacityText = document.createElement("span");
+  capacityText.classList.add("detail__capacity-text");
+  capacityText.textContent = placesRestantes <= 0 ? "Complet" : "Disponibilité";
+
+  const capacityCount = document.createElement("span");
+  capacityCount.classList.add(
+    "detail__capacity-count",
+    `detail__capacity-count--${tier}`,
+  );
+  capacityCount.textContent = dispoText;
+
+  capacityLabel.appendChild(capacityText);
+  capacityLabel.appendChild(capacityCount);
+
+  // Barre
+  const capacityBar = document.createElement("div");
+  capacityBar.classList.add("detail__capacity-bar");
+
+  const capacityFill = document.createElement("div");
+  capacityFill.classList.add(
+    "detail__capacity-fill",
+    `detail__capacity-fill--${tier}`,
+  );
+  capacityFill.style.width = `${pct}%`;
+
+  capacityBar.appendChild(capacityFill);
+  capacityContainer.appendChild(capacityTitle);
+  capacityContainer.appendChild(capacityLabel);
+  capacityContainer.appendChild(capacityBar);
+  detailRight.appendChild(capacityContainer);
 
   [
     createDetail("Artiste", program.artiste),
@@ -123,7 +172,6 @@ if (!program) {
     createDetail("Horaire", program.horaire),
     createDetail("Durée", program.duree),
     createDetail("Prix", program.prix ? `${program.prix} €` : null),
-    createDetail("Disponibilité", dispoText),
   ].forEach((el) => {
     if (el) detailRight.appendChild(el);
   });

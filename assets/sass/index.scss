@@ -168,3 +168,78 @@ h1 {
     }
   }
 }
+
+//=============================
+//rideaux
+//=============================
+
+#intro-animation {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  overflow: hidden; // ← empêche tout débordement
+  max-height: 100vh;
+}
+
+.fade-black {
+  position: absolute;
+  inset: 0;
+  background: black;
+  animation: revealScene 4s ease forwards;
+}
+
+.curtain {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 100vh; // ← limité à la hauteur de l'écran
+}
+
+.curtain-left {
+  left: 0;
+  transform-origin: left center;
+
+  animation: openLeft 2.5s ease forwards;
+  background-image: url("/assets/img/curtain-left.png");
+}
+
+.curtain-right {
+  background-image: url("/assets/img/curtain-right.png");
+  right: 0;
+  transform-origin: right center;
+  animation: openRight 2.5s ease forwards;
+}
+
+@keyframes revealScene {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes openLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); // ← négatif pour partir à gauche
+  }
+}
+
+@keyframes openRight {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
