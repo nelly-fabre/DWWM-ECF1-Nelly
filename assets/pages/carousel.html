@@ -1,148 +1,60 @@
-<!doctype html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/style.min.css" />
-    <link
-      rel="icon"
-      href="/assets/img/favicon_io/favicon-32x32.png"
-      type="image/png"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <script
-      src="https://code.jquery.com/jquery-4.0.0.min.js"
-      integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <!-- 
-    ========================================================
-    ------------------------CAROUSEL------------------------
-    ========================================================= 
- -->
+<section class="programs-highlights" id="programs-highlights">
+  <h3>Vous pourriez aimer</h3>
 
-    <section class="programs-highlights" id="programs-highlights">
-      <!-------------------------------------->
-      <!-- Project carousel wrapper (START) -->
-      <!-------------------------------------->
-      <div class="programs-highlights__carousel-wrapper">
-        <!---------------------------->
-        <!-- Project carousel (START) -->
-        <!------------------------------>
-        <div class="programs-highlights__carousel">
-          <!----------------------------------->
-          <!-- Carousel arrows scroll(START) -->
-          <!----------------------------------->
-
-          <!------------------------------------>
-          <!-- Carousel cards wrapper (START) -->
-          <!------------------------------------>
-          <div class="programs-highlights__carousel__cards-wrapper">
-            <!-------------------->
-            <!-- PROJECT CARD 1 -->
-            <!-------------------->
-            <div class="programs-highlights__carousel__card is-active">
-              <div class="programs-highlights__carousel__card__picture">
-                <!------------------------------------------->
-                <!-- DIV FOR HOVER AND LINK TO THE PROJECT -->
-                <!------------------------------------------->
-                <a
-                  href="assets/pages/detail-program.html?id=1"
-                  class="programs-highlights__carousel-project-link"
-                  ><div class="picture-hover">
-                    <img
-                      src="assets/img/hover-more-icon.png"
-                      alt="-"
-                      class="more-icon"
-                    /></div
-                ></a>
-                <img
-                  src="/assets/img/Cyrano.webp"
-                  alt=""
-                  class="programs-highlights__carousel__card__picture-item"
-                />
-              </div>
-              <p class="programs-highlights__carousel__card__title">
-                Cyrano de Bergerac
-              </p>
-            </div>
-            <!-------------------->
-            <!-- PROJECT CARD 2 -->
-            <!-------------------->
-            <div class="programs-highlights__carousel__card is-inactive">
-              <div class="programs-highlights__carousel__card__picture">
-                <!------------------------------------------->
-                <!-- DIV FOR HOVER AND LINK TO THE PROJECT -->
-                <!------------------------------------------->
-                <a
-                  href="assets/pages/detail-program.html?id=1"
-                  class="programs-highlights__carousel-project-link"
-                  ><div class="picture-hover">
-                    <img
-                      src="assets/img/hover-more-icon.png"
-                      alt="-"
-                      class="more-icon"
-                    /></div
-                ></a>
-
-                <img
-                  src="/assets/img/jamel.webp"
-                  alt=""
-                  class="programs-highlights__carousel__card__picture-item"
-                />
-              </div>
-              <p class="programs-highlights__carousel__card__title">
-                Jamel Comedy Club
-              </p>
-            </div>
-            <!-------------------->
-            <!-- PROJECT CARD 3 -->
-            <!-------------------->
-            <div class="programs-highlights__carousel__card is-inactive">
-              <div class="programs-highlights__carousel__card__picture">
-                <!------------------------------------------->
-                <!-- DIV FOR HOVER AND LINK TO THE PROJECT -->
-                <!------------------------------------------->
-                <a
-                  href="assets/pages/detail-program.html?id=1"
-                  class="programs-highlights__carousel-project-link"
-                  ><div class="picture-hover">
-                    <img
-                      src="assets/img/hover-more-icon.png"
-                      alt="-"
-                      class="more-icon"
-                    /></div
-                ></a>
-                <img
-                  src="/assets/img/paul.webp"
-                  alt=""
-                  class="programs-highlights__carousel__card__picture-item"
-                />
-              </div>
-              <p class="programs-highlights__carousel__card__title">
-                Paul Music
-              </p>
-            </div>
+  <div class="programs-highlights__cards">
+    <div class="programs-highlights__card">
+      <a href="/assets/pages/detail-program.html?id=1">
+        <div class="programs-highlights__card__picture">
+          <img src="/assets/img/Cyrano.webp" alt="Cyrano de Bergerac" />
+          <div class="programs-highlights__card__overlay">
+            <img
+              src="/assets/img/hover-more-icon.png"
+              alt=""
+              class="more-icon"
+            />
           </div>
-          <!---------------------------------->
-          <!-- Carousel cards wrapper (END) -->
-          <!---------------------------------->
         </div>
+      </a>
+      <p class="program__type">Théâtre</p>
+      <p class="program__title">Cyrano de Bergerac</p>
+    </div>
 
-        <a href="assets/pages/programmation.html" class="backlink-to-full-page"
-          >Voir l'ensemble des spectacles</a
-        >
-      </div>
-      <!---------------------------------->
-      <!-- Carousel cards wrapper (END) -->
-      <!---------------------------------->
-    </section>
-    <script src="/assets/js/main.js"></script>
-  </body>
-</html>
+    <div class="programs-highlights__card">
+      <a href="/assets/pages/detail-program.html?id=8">
+        <div class="programs-highlights__card__picture">
+          <img src="/assets/img/jamel.webp" alt="Jamel Comedy Club" />
+          <div class="programs-highlights__card__overlay">
+            <img
+              src="/assets/img/hover-more-icon.png"
+              alt=""
+              class="more-icon"
+            />
+          </div>
+        </div>
+      </a>
+      <p class="program__type">Stand-up</p>
+      <p class="program__title">Jamel Comedy Club</p>
+    </div>
+
+    <div class="programs-highlights__card">
+      <a href="/assets/pages/detail-program.html?id=3">
+        <div class="programs-highlights__card__picture">
+          <img src="/assets/img/paul.webp" alt="Paul Music" />
+          <div class="programs-highlights__card__overlay">
+            <img
+              src="/assets/img/hover-more-icon.png"
+              alt=""
+              class="more-icon"
+            />
+          </div>
+        </div>
+      </a>
+      <p class="program__type">Concert</p>
+      <p class="program__title">Paul Music</p>
+    </div>
+  </div>
+
+  <a href="/assets/pages/programmation.html" class="btn-reserve">
+    Voir l'ensemble des spectacles
+  </a>
+</section>
