@@ -2,6 +2,8 @@
 @import "header.scss";
 @import "footer.scss";
 @import "programmation.scss";
+@import "detail-program";
+@import "carousel";
 
 * {
   margin: 0;
@@ -37,7 +39,6 @@ h2,
 h3 {
   text-transform: uppercase;
   font-family: "inria-serif";
-  font-weight: bold;
 }
 
 h1 {
@@ -64,4 +65,5 @@ h3 {
 h4 {
   font-family: "roboto";
   font-size: 18px;
+  font-weight: 600;
 }
