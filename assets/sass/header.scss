@@ -25,15 +25,16 @@
   }
 
   &__title {
-    font-family: "inria-serif";
-    text-transform: uppercase;
-
     &--logo {
+      font-family: "inria-serif";
+      text-transform: uppercase;
       font-size: 24px;
       color: #f5f0e8;
     }
 
     &--name {
+      font-family: "inria-serif";
+      text-transform: uppercase;
       font-size: 16px;
       color: #f5f0e8;
     }
@@ -72,7 +73,7 @@
   background: transparent;
   color: #d4a843;
   border: 1px solid #d4a843;
-  max-width: 130px;
+  display: inline-block;
   padding: 6px 16px;
   text-decoration: none;
   cursor: pointer;
