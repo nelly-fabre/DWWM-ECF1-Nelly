@@ -3,172 +3,222 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/css/main.min.css" />
-    <title>Mentions légales | Le Phosphore • Salle de spectacle</title>
-    <link rel="icon" href="/assets/img/icons/brand-logo.png" type="image/png" />
+    <title>Mentions légales | Le Phosphore</title>
+    <link rel="stylesheet" href="../css/style.min.css" />
+    <link
+      rel="icon"
+      href="/assets/img/favicon_io/favicon-32x32.png"
+      type="image/png"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $("#header-content").load("/assets/pages/header.html", function () {
+          const currentPage = window.location.pathname.split("/").pop();
+          document.querySelectorAll(".navbar__links a").forEach((link) => {
+            const linkPage = link.getAttribute("href").split("/").pop();
+            link.classList.toggle("active", linkPage === currentPage);
+          });
+          const burger = document.getElementById("burger");
+          const navLinks = document.querySelector(".navbar__links");
+          if (burger && navLinks) {
+            burger.addEventListener("click", () => {
+              const isOpen = navLinks.classList.toggle("open");
+              burger.setAttribute("aria-expanded", isOpen);
+            });
+          }
+        });
+        $("#footer-content").load("/assets/pages/footer.html");
+      });
+    </script>
+    <meta
+      name="description"
+      content="Mentions légales de la salle de spectacle Le Phosphore."
+    />
   </head>
   <body>
-    <!-- 
-      =====================
-      ======= HEADER ====== 
-      =====================
-    -->
-    <div id="header"></div>
+    <header><div id="header-content"></div></header>
 
     <main>
-      <section>
-        <h1 class="mb-5 mt-5">Mentions légales</h1>
-        <p><strong>Dernière mise à jour :</strong> juin 2026</p>
+      <section class="mentions-hero">
+        <h2>Mentions légales</h2>
+        <p>Dernière mise à jour : juin 2026</p>
+      </section>
 
-        <h4 class="mt-5 mb-2">1. Éditeur du site</h4>
-        <p>Le présent site est édité par :</p>
-        <ul>
-          <li><strong>Raison sociale :</strong> Le Phosphore</li>
-          <li><strong>Nom du responsable :</strong> John Doe, gérant</li>
-          <li><strong>Forme juridique :</strong> SARL</li>
-          <li>
-            <strong>Adresse :</strong> 12, rue des Beaux-Arts, 33000 Bordeaux,
-            France
-          </li>
-          <li><strong>Téléphone :</strong> +33 5 56 00 00 00</li>
-          <li><strong>Email :</strong> contact@le-phosphore.fr</li>
-          <li><strong>N° SIRET :</strong> 000 000 000 00000</li>
-          <li><strong>Code APE :</strong> 9001Z – Arts du spectacle vivant</li>
-          <li><strong>N° de TVA intracommunautaire :</strong> FR00000000000</li>
-          <li><strong>Capital social :</strong> 10 000 €</li>
-        </ul>
+      <section class="mentions">
+        <div class="mentions__block">
+          <h3>1. Éditeur du site</h3>
+          <div class="mentions__grid">
+            <div class="mentions__row">
+              <span>Raison sociale</span><span>Le Phosphore</span>
+            </div>
+            <div class="mentions__row">
+              <span>Responsable</span><span>John Doe, gérant</span>
+            </div>
+            <div class="mentions__row">
+              <span>Forme juridique</span><span>SARL</span>
+            </div>
+            <div class="mentions__row">
+              <span>Adresse</span
+              ><span>12, rue des Beaux-Arts, 33000 Bordeaux</span>
+            </div>
+            <div class="mentions__row">
+              <span>Téléphone</span><span>+33 5 56 00 00 00</span>
+            </div>
+            <div class="mentions__row">
+              <span>Email</span
+              ><span
+                ><a href="mailto:contact@le-phosphore.fr"
+                  >contact@le-phosphore.fr</a
+                ></span
+              >
+            </div>
+            <div class="mentions__row">
+              <span>N° SIRET</span><span>000 000 000 00000</span>
+            </div>
+            <div class="mentions__row">
+              <span>Code APE</span><span>9001Z – Arts du spectacle vivant</span>
+            </div>
+            <div class="mentions__row">
+              <span>TVA intracommunautaire</span><span>FR00000000000</span>
+            </div>
+            <div class="mentions__row">
+              <span>Capital social</span><span>10 000 €</span>
+            </div>
+          </div>
+        </div>
 
-        <h4 class="mt-5 mb-2">2. Directeur de la publication</h4>
-        <p>
-          Le directeur de la publication est John Doe, en sa qualité de
-          gérant(e) de la SARL Le Phosphore.
-        </p>
+        <div class="mentions__block">
+          <h3>2. Directeur de la publication</h3>
+          <p>
+            Le directeur de la publication est John Doe, en sa qualité de gérant
+            de la SARL Le Phosphore.
+          </p>
+        </div>
 
-        <h4 class="mt-5 mb-2">3. Hébergeur du site</h4>
-        <p>Le site www.le-phosphore.fr est hébergé par :</p>
-        <ul>
-          <li><strong>Hébergeur :</strong> OVH SAS</li>
-          <li>
-            <strong>Adresse :</strong> 2 rue Kellermann, 59100 Roubaix, France
-          </li>
-          <li><strong>Site web :</strong> www.ovh.com</li>
-          <li><strong>Téléphone :</strong> 1007 (depuis la France)</li>
-        </ul>
+        <div class="mentions__block">
+          <h3>3. Hébergeur du site</h3>
+          <div class="mentions__grid">
+            <div class="mentions__row">
+              <span>Hébergeur</span><span>OVH SAS</span>
+            </div>
+            <div class="mentions__row">
+              <span>Adresse</span
+              ><span>2 rue Kellermann, 59100 Roubaix, France</span>
+            </div>
+            <div class="mentions__row">
+              <span>Site web</span
+              ><span
+                ><a href="https://www.ovh.com" target="_blank"
+                  >www.ovh.com</a
+                ></span
+              >
+            </div>
+            <div class="mentions__row">
+              <span>Téléphone</span><span>1007 (depuis la France)</span>
+            </div>
+          </div>
+        </div>
 
-        <h4 class="mt-5 mb-2">4. Propriété intellectuelle</h4>
-        <p>
-          L'ensemble des éléments composant ce site (textes, photographies,
-          images, vidéos, graphismes, logo, architecture du site) est la
-          propriété exclusive de la SARL Le Phosphore, ou fait l'objet d'une
-          autorisation d'utilisation.
-        </p>
-        <p>
-          Toute reproduction, représentation, modification, publication ou
-          adaptation de tout ou partie de ces éléments, quel que soit le moyen
-          ou le procédé utilisé, est interdite sans l'autorisation écrite
-          préalable du Phosphore, sous peine de contrefaçon au sens des articles
-          L.335-2 et suivants du Code de la propriété intellectuelle.
-        </p>
+        <div class="mentions__block">
+          <h3>4. Propriété intellectuelle</h3>
+          <p>
+            L'ensemble des éléments composant ce site (textes, photographies,
+            images, vidéos, graphismes, logo, architecture du site) est la
+            propriété exclusive de la SARL Le Phosphore, ou fait l'objet d'une
+            autorisation d'utilisation.
+          </p>
+          <p>
+            Toute reproduction, représentation, modification, publication ou
+            adaptation de tout ou partie de ces éléments, quel que soit le moyen
+            ou le procédé utilisé, est interdite sans l'autorisation écrite
+            préalable du Phosphore, sous peine de contrefaçon au sens des
+            articles L.335-2 et suivants du Code de la propriété intellectuelle.
+          </p>
+        </div>
 
-        <h4 class="mt-5 mb-2">5. Protection des données personnelles</h4>
+        <div class="mentions__block">
+          <h3>5. Protection des données personnelles</h3>
+          <h4>5.1 Responsable du traitement</h4>
+          <p>
+            Le responsable du traitement des données personnelles collectées sur
+            ce site est John Doe, SARL Le Phosphore, 12, rue des Beaux-Arts,
+            33000 Bordeaux.
+          </p>
+          <p>
+            Contact :
+            <a href="mailto:contact@le-phosphore.fr">contact@le-phosphore.fr</a>
+          </p>
+          <h4>5.2 Données collectées</h4>
+          <p>
+            Ce site propose un formulaire de contact permettant aux visiteurs de
+            nous adresser une demande. Les données collectées (nom, email,
+            message) sont utilisées exclusivement pour traiter votre demande et
+            ne sont ni cédées ni transmises à des tiers à des fins commerciales.
+            Elles sont conservées pendant 3 ans puis supprimées.
+          </p>
+          <h4>5.3 Vos droits</h4>
+          <p>
+            Conformément au RGPD (UE 2016/679) et à la loi Informatique et
+            Libertés, vous disposez des droits d'accès, de rectification,
+            d'effacement, de limitation, de portabilité et d'opposition. Pour
+            les exercer :
+            <a href="mailto:contact@le-phosphore.fr">contact@le-phosphore.fr</a
+            >. En cas de réponse insatisfaisante, vous pouvez contacter la
+            <a href="https://www.cnil.fr" target="_blank">CNIL</a>.
+          </p>
+        </div>
 
-        <h5>5.1 Responsable du traitement</h5>
-        <p>
-          Le responsable du traitement des données personnelles collectées sur
-          ce site est John Doe, SARL Le Phosphore, 12, rue des Beaux-Arts, 33000
-          Bordeaux.
-        </p>
+        <div class="mentions__block">
+          <h3>6. Cookies</h3>
+          <p>
+            Le site peut utiliser des cookies afin d'améliorer l'expérience
+            utilisateur et d'effectuer des mesures d'audience anonymisées.
+            Conformément à la réglementation, votre consentement est recueilli
+            avant le dépôt de tout cookie non strictement nécessaire. Vous
+            pouvez modifier vos préférences via les paramètres de votre
+            navigateur.
+          </p>
+        </div>
 
-        <p><strong>Contact : </strong>contact@le-phosphore.fr</p>
+        <div class="mentions__block">
+          <h3>7. Liens hypertextes</h3>
+          <p>
+            Le site peut contenir des liens vers des sites tiers. Le Phosphore
+            ne saurait être tenu responsable du contenu de ces sites externes,
+            de leur disponibilité, ou de l'utilisation faite des données
+            personnelles par ces tiers.
+          </p>
+        </div>
 
-        <h5>5.2 Données collectées</h5>
-        <p>
-          Ce site propose un formulaire de contact permettant aux visiteurs de
-          nous adresser une demande (renseignements, réservation, partenariat).
-          Les données collectées via ce formulaire (nom, email, message, et le
-          cas échéant téléphone) sont utilisées exclusivement pour traiter votre
-          demande et ne sont ni cédées ni transmises à des tiers à des fins
-          commerciales.
-        </p>
-        <p>
-          Ces données sont conservées pendant une durée de 3 ans à compter du
-          dernier contact, puis supprimées.
-        </p>
-        <p>
-          Des données de navigation anonymisées peuvent également être
-          collectées via des outils d'analyse d'audience (voir section 6 –
-          Cookies), sans permettre d'identifier personnellement les visiteurs.
-        </p>
+        <div class="mentions__block">
+          <h3>8. Limitation de responsabilité</h3>
+          <p>
+            Le Phosphore s'efforce d'assurer l'exactitude et la mise à jour
+            régulière des informations diffusées sur ce site. Toutefois, il ne
+            peut garantir l'exactitude ou la complétude de ces informations et
+            décline toute responsabilité pour toute imprécision ou omission.
+          </p>
+        </div>
 
-        <h5>5.3 Vos droits</h5>
-        <p>
-          Conformément au RGPD (UE 2016/679) et à la loi Informatique et
-          Libertés, vous disposez des droits d'accès, de rectification,
-          d'effacement, de limitation, de portabilité et d'opposition concernant
-          vos données personnelles.
-        </p>
-        <p>
-          Pour exercer ces droits ou pour toute question relative à la
-          protection de vos données, vous pouvez contacter Le Phosphore à
-          l'adresse contact@le-phosphore.fr. En cas de réponse insatisfaisante,
-          vous pouvez introduire une réclamation auprès de la CNIL
-          (www.cnil.fr).
-        </p>
-
-        <h4 class="mt-5 mb-2">6. Cookies</h4>
-        <p>
-          Le site www.le-phosphore.fr est susceptible d'utiliser des cookies
-          afin d'améliorer l'expérience utilisateur et d'effectuer des mesures
-          d'audience anonymisées. Un cookie est un petit fichier texte déposé
-          sur votre appareil lors de la visite d'un site.
-        </p>
-        <p>
-          Conformément à la réglementation en vigueur, votre consentement est
-          recueilli avant le dépôt de tout cookie non strictement nécessaire au
-          fonctionnement du site. Vous pouvez à tout moment modifier vos
-          préférences en matière de cookies via les paramètres de votre
-          navigateur.
-        </p>
-
-        <h4 class="mt-5 mb-2">7. Liens hypertextes</h4>
-        <p>
-          Le site peut contenir des liens vers des sites tiers (réseaux sociaux,
-          billetterie partenaire, etc.). Le Phosphore ne saurait être tenu
-          responsable du contenu de ces sites externes, de leur disponibilité,
-          ou de l'utilisation faite des données personnelles par ces tiers.
-        </p>
-
-        <h4 class="mt-5 mb-2">8. Limitation de responsabilité</h4>
-        <p>
-          Le Phosphore s'efforce d'assurer l'exactitude et la mise à jour
-          régulière des informations diffusées sur ce site (programmation,
-          horaires, tarifs). Toutefois, Le Phosphore ne peut garantir
-          l'exactitude, la complétude ou l'actualité de ces informations et
-          décline toute responsabilité pour toute imprécision, inexactitude ou
-          omission portant sur des informations disponibles sur le site.
-        </p>
-        <p>
-          Le Phosphore ne peut être tenu responsable des dommages directs ou
-          indirects résultant de l'accès au site ou de l'utilisation de son
-          contenu.
-        </p>
-
-        <h4 class="mt-5 mb-2">9. Droit applicable et juridiction compétente</h4>
-        <p>
-          Les présentes mentions légales sont soumises au droit français. En cas
-          de litige relatif à leur interprétation ou à leur exécution, les
-          tribunaux français seront seuls compétents.
-        </p>
+        <div class="mentions__block">
+          <h3>9. Droit applicable et juridiction compétente</h3>
+          <p>
+            Les présentes mentions légales sont soumises au droit français. En
+            cas de litige, les tribunaux français seront seuls compétents.
+          </p>
+        </div>
       </section>
     </main>
 
-    <!-- 
-      ==================
-      ===== FOOTER ===== 
-      ==================
-    -->
-    <div id="footer"></div>
-    <script src="/assets/js/header.js" type="module" defer></script>
-    <script src="/assets/js/footer.js" type="module" defer></script>
+    <button class="scroll-top" id="scrollTop" aria-label="Retour en haut">
+      ↑
+    </button>
+    <footer><div id="footer-content"></div></footer>
+    <script src="/assets/js/main.js"></script>
   </body>
 </html>
