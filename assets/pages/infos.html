@@ -22,16 +22,23 @@
     <script>
       $(document).ready(function () {
         $("#header-content").load("/assets/pages/header.html", function () {
+          // active link
           const currentPage = window.location.pathname.split("/").pop();
-
-          document.querySelectorAll(".nav-link").forEach((link) => {
+          document.querySelectorAll(".navbar__links a").forEach((link) => {
             const linkPage = link.getAttribute("href").split("/").pop();
-            if (linkPage === currentPage) {
-              link.classList.add("active");
-            } else {
-              link.classList.remove("active");
-            }
+            link.classList.toggle("active", linkPage === currentPage);
           });
+
+          // Burger menu
+          const burger = document.getElementById("burger");
+          const navLinks = document.querySelector(".navbar__links");
+
+          if (burger && navLinks) {
+            burger.addEventListener("click", () => {
+              const isOpen = navLinks.classList.toggle("open");
+              burger.setAttribute("aria-expanded", isOpen);
+            });
+          }
         });
 
         $("#footer-content").load("/assets/pages/footer.html");

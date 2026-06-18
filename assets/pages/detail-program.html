@@ -19,15 +19,25 @@
     ></script>
     <script>
       $(document).ready(function () {
-        // header
-        $("#header-content").load("header.html", function () {
+        $("#header-content").load("/assets/pages/header.html", function () {
+          // active link
           const currentPage = window.location.pathname.split("/").pop();
-          document.querySelectorAll(".nav-link").forEach((link) => {
+          document.querySelectorAll(".navbar__links a").forEach((link) => {
             const linkPage = link.getAttribute("href").split("/").pop();
             link.classList.toggle("active", linkPage === currentPage);
           });
-        });
 
+          // Burger menu
+          const burger = document.getElementById("burger");
+          const navLinks = document.querySelector(".navbar__links");
+
+          if (burger && navLinks) {
+            burger.addEventListener("click", () => {
+              const isOpen = navLinks.classList.toggle("open");
+              burger.setAttribute("aria-expanded", isOpen);
+            });
+          }
+        });
         // footer
         $("#footer-content").load("footer.html");
         $("#carousel").load("/assets/pages/carousel.html");
