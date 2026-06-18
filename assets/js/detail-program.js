@@ -1,7 +1,7 @@
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
-const reponse = await fetch("/spectacles.json");
+const reponse = await fetch("spectacles.json");
 const data = await reponse.json();
 const fiches = data[0].spectacles;
 
@@ -23,6 +23,7 @@ if (!program) {
 
     const titleEl = document.createElement("div");
     titleEl.classList.add("detail_title");
+
     titleEl.textContent = label;
 
     const infoEl = document.createElement("div");

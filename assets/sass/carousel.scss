@@ -11,7 +11,7 @@
     color: #6b1d3a;
   }
 
-  &__cards {
+  &__carousel-cards {
     display: flex;
     gap: 30px;
     justify-content: center;
@@ -22,7 +22,7 @@
     }
   }
 
-  &__card {
+  &__carousel-card {
     flex: 1;
     max-width: 400px;
 
