@@ -207,11 +207,11 @@ h1 {
   transform-origin: left center;
 
   animation: openLeft 2.5s ease forwards;
-  background-image: url("/assets/img/curtain-left.png");
+  background-image: url("/assets/img/curtain-left.webp");
 }
 
 .curtain-right {
-  background-image: url("/assets/img/curtain-right.png");
+  background-image: url("/assets/img/curtain-right.webp");
   right: 0;
   transform-origin: right center;
   animation: openRight 2.5s ease forwards;

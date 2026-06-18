@@ -57,7 +57,7 @@ fetch("/spectacles.json")
       const programImageHoverIcon = document.createElement("img");
       programImageHoverIcon.classList.add("more-icon");
       programImageHoverIcon.alt = "Voir le programme";
-      programImageHoverIcon.src = "/assets/img/hover-more-icon.png";
+      programImageHoverIcon.src = "/assets/img/hover-more-icon.webp";
 
       const programImageHoverLink = document.createElement("a");
       programImageHoverLink.href = `/assets/pages/detail-program.html?id=${program.id}`;
