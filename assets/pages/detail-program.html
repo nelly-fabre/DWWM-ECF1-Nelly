@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="fr">
   <head>
+    <base href="/DWWM-ECF1-Nelly/" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page Spectacle | Le Phosphore</title>
@@ -11,7 +12,7 @@
       href="../img/favicon_io/favicon-32x32.webp"
       type="image/png"
     />
-    <script type="module" src="/assets/js/detail-program.js"></script>
+    <script type="module" src="../js/detail-program.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
@@ -19,7 +20,7 @@
     ></script>
     <script>
       $(document).ready(function () {
-        $("#header-content").load("/assets/pages/header.html", function () {
+        $("#header-content").load("/../pages/header.html", function () {
           // active link
           const currentPage = window.location.pathname.split("/").pop();
           document.querySelectorAll(".navbar__links a").forEach((link) => {
@@ -40,10 +41,9 @@
         });
         // footer
         $("#footer-content").load("footer.html");
-        $("#carousel").load("/assets/pages/carousel.html");
+        $("#carousel").load("../pages/carousel.html");
       });
     </script>
-    <base href="/DWWM-ECF1-Nelly/" />
   </head>
   <body>
     <div id="header-content"></div>

@@ -1,4 +1,4 @@
-fetch("/spectacles.json")
+fetch("spectacles.json")
   .then((response) => response.json())
   .then((data) => {
     const programs = data[0].spectacles;
@@ -57,10 +57,10 @@ fetch("/spectacles.json")
       const programImageHoverIcon = document.createElement("img");
       programImageHoverIcon.classList.add("more-icon");
       programImageHoverIcon.alt = "Voir le programme";
-      programImageHoverIcon.src = "/assets/img/hover-more-icon.webp";
+      programImageHoverIcon.src = "assets/img/hover-more-icon.webp";
 
       const programImageHoverLink = document.createElement("a");
-      programImageHoverLink.href = `/assets/pages/detail-program.html?id=${program.id}`;
+      programImageHoverLink.href = `assets/pages/detail-program.html?id=${program.id}`;
 
       const programType = document.createElement("p");
       programType.classList.add("program__type");
@@ -69,7 +69,7 @@ fetch("/spectacles.json")
       const programTitle = document.createElement("a");
       programTitle.classList.add("program__title");
       programTitle.textContent = program.titre;
-      programTitle.href = `/assets/pages/detail-program.html?id=${program.id}`;
+      programTitle.href = `assets/pages/detail-program.html?id=${program.id}`;
 
       const programDate = document.createElement("p");
       programDate.classList.add("program__date");

@@ -1,13 +1,14 @@
 <!doctype html>
 <html lang="fr">
   <head>
+    <base href="/DWWM-ECF1-Nelly/" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact | Le Phosphore</title>
     <link rel="stylesheet" href="../css/style.min.css" />
     <link
       rel="icon"
-      href="/assets/img/favicon_io/favicon-32x32.webp"
+      href="../img/favicon_io/favicon-32x32.webp"
       type="image/png"
     />
     <link
@@ -21,7 +22,7 @@
     ></script>
     <script>
       $(document).ready(function () {
-        $("#header-content").load("/assets/pages/header.html", function () {
+        $("#header-content").load("../pages/header.html", function () {
           const currentPage = window.location.pathname.split("/").pop();
           document.querySelectorAll(".navbar__links a").forEach((link) => {
             const linkPage = link.getAttribute("href").split("/").pop();
@@ -38,7 +39,7 @@
           }
         });
 
-        $("#footer-content").load("/assets/pages/footer.html");
+        $("#footer-content").load("../pages/footer.html");
       });
     </script>
     <meta
@@ -49,7 +50,6 @@
       name="description"
       content="Contactez la salle de spectacle Le Phosphore à Bordeaux. Retrouvez notre adresse, nos horaires d'ouverture et tous les moyens d'accès en transports en commun."
     />
-    <base href="/DWWM-ECF1-Nelly/" />
   </head>
   <body>
     <header><div id="header-content"></div></header>
