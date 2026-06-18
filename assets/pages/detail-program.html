@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/css/style.min.css" />
     <link
       rel="icon"
-      href="../img/favicon_io/favicon-32x32.webp"
+      href="assets/img/favicon_io/favicon-32x32.webp"
       type="image/png"
     />
     <script type="module" src="../js/detail-program.js"></script>
@@ -20,7 +20,7 @@
     ></script>
     <script>
       $(document).ready(function () {
-        $("#header-content").load("/../pages/header.html", function () {
+        $("#header-content").load("./pages/header.html", function () {
           // active link
           const currentPage = window.location.pathname.split("/").pop();
           document.querySelectorAll(".navbar__links a").forEach((link) => {
