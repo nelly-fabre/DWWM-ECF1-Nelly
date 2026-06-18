@@ -4,15 +4,17 @@
     <base href="/DWWM-ECF1-Nelly/" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page Spectacle | Le Phosphore</title>
-
+    <title>Infos Pratiques | Le Phosphore</title>
     <link rel="stylesheet" href="assets/css/style.min.css" />
     <link
       rel="icon"
       href="assets/img/favicon_io/favicon-32x32.webp"
       type="image/png"
     />
-    <script type="module" src="../js/detail-program.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
@@ -21,17 +23,13 @@
     <script>
       $(document).ready(function () {
         $("#header-content").load("./pages/header.html", function () {
-          // active link
           const currentPage = window.location.pathname.split("/").pop();
           document.querySelectorAll(".navbar__links a").forEach((link) => {
             const linkPage = link.getAttribute("href").split("/").pop();
             link.classList.toggle("active", linkPage === currentPage);
           });
-
-          // Burger menu
           const burger = document.getElementById("burger");
           const navLinks = document.querySelector(".navbar__links");
-
           if (burger && navLinks) {
             burger.addEventListener("click", () => {
               const isOpen = navLinks.classList.toggle("open");
@@ -39,11 +37,13 @@
             });
           }
         });
-        // footer
-        $("#footer-content").load("footer.html");
-        $("#carousel").load("../pages/carousel.html");
+        $("#footer-content").load("assets/pages/footer.html");
       });
     </script>
+    <meta
+      name="description"
+      content="Tout ce qu'il faut savoir avant de venir au Phosphore : plan de salle, tarifs, restauration, vestiaire et accessibilité pour les personnes à mobilité réduite."
+    />
   </head>
   <body>
     <div id="header-content"></div>
