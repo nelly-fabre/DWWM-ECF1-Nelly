@@ -33,7 +33,12 @@
 
         $("#footer-content").load("assets/pages/footer.html");
 
-        $("#carousel").load("assets/pages/carousel.html");
+        $("#carousel").load("assets/pages/carousel.html", function () {
+          // Le carrousel est chargé, on peut appeler son script !
+          if (typeof initCarousel === "function") {
+            initCarousel();
+          }
+        });
       });
     </script>
   </head>
