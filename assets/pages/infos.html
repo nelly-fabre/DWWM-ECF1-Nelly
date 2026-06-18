@@ -22,7 +22,7 @@
     ></script>
     <script>
       $(document).ready(function () {
-        $("#header-content").load("assets/pages/header.html", function () {
+        $("#header-content").load("./pages/header.html", function () {
           const currentPage = window.location.pathname.split("/").pop();
           document.querySelectorAll(".navbar__links a").forEach((link) => {
             const linkPage = link.getAttribute("href").split("/").pop();
