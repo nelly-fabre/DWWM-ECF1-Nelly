@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Le Phosphore</title>
+    <link rel="stylesheet" href="../css/style.min.css" />
+    <link
+      rel="icon"
+      href="/assets/img/favicon_io/favicon-32x32.png"
+      type="image/png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $("#header-content").load("/assets/pages/header.html", function () {
+          const currentPage = window.location.pathname.split("/").pop();
+          document.querySelectorAll(".navbar__links a").forEach((link) => {
+            const linkPage = link.getAttribute("href").split("/").pop();
+            link.classList.toggle("active", linkPage === currentPage);
+          });
+
+          const burger = document.getElementById("burger");
+          const navLinks = document.querySelector(".navbar__links");
+          if (burger && navLinks) {
+            burger.addEventListener("click", () => {
+              const isOpen = navLinks.classList.toggle("open");
+              burger.setAttribute("aria-expanded", isOpen);
+            });
+          }
+        });
+
+        $("#footer-content").load("/assets/pages/footer.html");
+      });
+    </script>
+    <meta
+      name="description"
+      content="Contactez la salle de spectacle Le Phosphore — adresse, horaires et accès."
+    />
+  </head>
+  <body>
+    <header><div id="header-content"></div></header>
+
+    <main>
+      <!-- HERO -->
+      <section class="contact-hero">
+        <h2>Nous trouver</h2>
+        <p>
+          Le Phosphore vous accueille au cœur de la ville. Retrouvez toutes les
+          informations pour venir nous rendre visite.
+        </p>
+      </section>
+
+      <!-- GRILLE INFOS + CARTE -->
+      <section class="contact-grid">
+        <!-- Colonne gauche -->
+        <div class="contact-grid__left">
+          <!-- Adresse -->
+          <div class="contact-card">
+            <div class="contact-card__icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="contact-card__content">
+              <h3>Adresse</h3>
+              <p>12 Rue du Théâtre<br />33000 Bordeaux</p>
+              <a
+                href="https://maps.google.com"
+                target="_blank"
+                class="contact-card__link"
+              >
+                Ouvrir dans Google Maps
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Horaires -->
+          <div class="contact-card">
+            <div class="contact-card__icon">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <div class="contact-card__content">
+              <h3>Horaires d'ouverture</h3>
+              <div class="contact-card__horaires">
+                <div class="contact-card__horaire-row">
+                  <span>Mardi — Jeudi</span>
+                  <span>19h – 23h</span>
+                </div>
+                <div class="contact-card__horaire-row">
+                  <span>Vendredi — Samedi</span>
+                  <span>19h – 00h</span>
+                </div>
+                <div class="contact-card__horaire-row">
+                  <span>Dimanche</span>
+                  <span>19h – 22h</span>
+                </div>
+                <div
+                  class="contact-card__horaire-row contact-card__horaire-row--closed"
+                >
+                  <span>Lundi</span>
+                  <span>Fermé</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact direct -->
+          <div class="contact-card">
+            <div class="contact-card__icon">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="contact-card__content">
+              <h3>Nous contacter</h3>
+              <p>
+                <a href="tel:+33556123456" class="contact-card__link"
+                  >05 56 12 34 56</a
+                >
+              </p>
+              <p>
+                <a
+                  href="mailto:contact@lephosphore.fr"
+                  class="contact-card__link"
+                  >contact@lephosphore.fr</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Colonne droite — Accès transports -->
+        <div class="contact-grid__right">
+          <div class="contact-transports">
+            <h3>Accès & Transports</h3>
+
+            <div class="contact-transport">
+              <div
+                class="contact-transport__badge contact-transport__badge--tram"
+              >
+                T
+              </div>
+              <div>
+                <h4>Tramway</h4>
+                <p>
+                  Ligne A et B — Arrêt <strong>Grand Théâtre</strong> (2 min à
+                  pied)
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-transport">
+              <div
+                class="contact-transport__badge contact-transport__badge--bus"
+              >
+                B
+              </div>
+              <div>
+                <h4>Bus</h4>
+                <p>
+                  Lignes 15, 27 et 34 — Arrêt
+                  <strong>Place de la Comédie</strong>
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-transport">
+              <div
+                class="contact-transport__badge contact-transport__badge--velo"
+              >
+                V
+              </div>
+              <div>
+                <h4>Vélo & Trottinette</h4>
+                <p>Station V3 à 50m — parking vélos sécurisé devant la salle</p>
+              </div>
+            </div>
+
+            <div class="contact-transport">
+              <div
+                class="contact-transport__badge contact-transport__badge--voiture"
+              >
+                P
+              </div>
+              <div>
+                <h4>En voiture</h4>
+                <p>Parking Tourny à 200m — Parking Gambetta à 350m</p>
+              </div>
+            </div>
+
+            <!-- Carte intégrée -->
+            <div class="contact-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2825.123456789!2d-0.5760!3d44.8378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDUwJzE2LjEiTiAwwrAzNCczMy42Ilc!5e0!3m2!1sfr!2sfr!4v1234567890"
+                width="100%"
+                height="250"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Localisation Le Phosphore"
+              >
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Retour en haut">
+      ↑
+    </button>
+    <footer><div id="footer-content"></div></footer>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
