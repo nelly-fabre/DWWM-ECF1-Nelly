@@ -169,16 +169,18 @@ h1 {
   }
 }
 
-//=============================
-//rideaux
-//=============================
+/* 
+==============================================
+  ------------CURTAIN ANIMATION---------------
+==============================================
+   */
 
 #intro-animation {
   position: fixed;
   inset: 0;
   z-index: 9999;
   pointer-events: none;
-  overflow: hidden; // ← empêche tout débordement
+  overflow: hidden;
   max-height: 100vh;
 }
 
