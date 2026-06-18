@@ -113,3 +113,81 @@
     }
   }
 }
+
+// ================================
+// Infobulle
+// ================================
+.info-hero__left {
+  position: relative;
+  display: inline-block;
+
+  &:hover .info-hero__tooltip {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.info-hero__tooltip {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  background-color: rgba(42, 45, 52, 0.92);
+  color: #f5f0e8;
+  font-size: 14px;
+  padding: 10px 16px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  pointer-events: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: rgba(42, 45, 52, 0.92);
+  }
+}
+
+// ================================
+// Toggle "En savoir +"
+// ================================
+
+.services__card__content {
+  p {
+    display: none;
+    transition: transform 0.3s ease;
+
+    &.visible {
+      display: block;
+    }
+  }
+}
+
+.services__toggle {
+  background: transparent;
+  border: 1px solid #6b1d3a;
+  color: #6b1d3a;
+  font-size: 14px;
+  font-family: "roboto";
+  text-transform: none;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 8px;
+  width: fit-content;
+  transition:
+    background 0.2s,
+    color 0.2s;
+
+  &:hover {
+    background-color: #6b1d3a;
+    color: #f5f0e8;
+  }
+}
