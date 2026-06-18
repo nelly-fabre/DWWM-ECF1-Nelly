@@ -1,6 +1,6 @@
 .index-hero {
   height: 100vh;
-  background-image: url(/assets/img/scene\ principale.webp);
+  background-image: url(assets/img/scene-principale.webp);
   background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
@@ -207,11 +207,11 @@ h1 {
   transform-origin: left center;
 
   animation: openLeft 2.5s ease forwards;
-  background-image: url("/assets/img/curtain-left.webp");
+  background-image: url("assets/img/curtain-left.webp");
 }
 
 .curtain-right {
-  background-image: url("/assets/img/curtain-right.webp");
+  background-image: url("assets/img/curtain-right.webp");
   right: 0;
   transform-origin: right center;
   animation: openRight 2.5s ease forwards;
